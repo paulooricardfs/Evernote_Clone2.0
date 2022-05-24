@@ -1,0 +1,21 @@
+<div>
+	<h4>{{note.title}} - Card</h4>
+	<p>
+	{{note.body}}
+	<hr />
+	
+	<b>Categoria:</b> {{ note.category.name }}  <br>
+
+	<b>Criado em:</b> {{fromIsoToPtBr note.created_at}}<br>
+	<b>Atualizado em:</b> {{fromIsoToPtBr note.updated_at}}<br>
+	<b>Etiquetas: </b> 
+	{{#each note.tagsList ~}}
+	{{#compare @index '!==' 0}},&nbsp;{{/compare ~}}
+	{{ this.name ~}}
+	{{/each ~}}
+	<br />
+	{{#if simple}}
+	<a href="/{{note.id}}" >Ver mais</a>
+	{{/if}}
+	</p>
+</div>

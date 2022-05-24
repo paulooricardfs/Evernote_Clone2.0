@@ -1,0 +1,19 @@
+<div>
+	<h1 class="text-center display-3 fw-normal">Notas Index</h1>
+</div>
+
+<div>
+	<ul>
+		{{#each notes}}
+		<br>
+		<li>
+			{{this.title}}<br>
+			{{this.body}}<br>
+			{{this.category_id}}<br>
+			{{this.created_at}}<br>
+			{{this.updated_at}}<br>
+			{{this.tags}}
+		</li>
+		{{/each}}
+	</ul>
+</div>

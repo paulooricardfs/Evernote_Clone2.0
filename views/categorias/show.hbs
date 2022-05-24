@@ -1,0 +1,38 @@
+<div>
+	<h1 class="text-center display-3 fw-normal">Categoria: {{category.name}}</h1>
+</div>
+<div>
+
+<ul>	
+	{{#each category.notes}}
+	<li>
+		{{> notas/_card note=this simple=true}}
+	</li>
+	{{/each}}
+</ul>
+
+
+<!-- 
+	value="{{this.category_id}}"
+	{{#if (compare this.category_id "==" ../note.category_id) }}
+
+	{{/if}}
+	>
+		<ul>	
+			{{#each notes}}
+			<br>
+			<li>
+				{{this.title}}<br>
+				{{this.body}}<br>
+				{{this.category_id}}<br>
+				{{this.created_at}}<br>
+				{{this.updated_at}}<br>
+				{{this.tags}}
+			</li>
+			{{/each}}
+		</ul>
+-->
+
+
+
+</div>

@@ -1,0 +1,19 @@
+<div>
+	<h1 class="text-center display-3 fw-normal">Editar Nota</h1>
+</div>
+
+<div>
+	<form action="/notes/{{note.id}}" method="POST">
+		<input type="hidden" name="_method" value="PUT" />
+		<input type="hidden" name="note_id" value="{{note.id}}" />
+		
+		{{>notas/_form}}
+		
+		<div style="clear: both;">
+			<div class="col-lg-12" style="text-align: center;">
+				<button class="btn btn-success" type="submit">Atualizar</button>
+			</div>	
+		</div>
+		
+	</form>
+</div>

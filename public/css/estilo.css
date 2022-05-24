@@ -1,0 +1,114 @@
+
+html, body, #home {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: white;
+}
+
+.hrnotas {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.navnotas {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+hr.vertical {
+  width: 0px;
+  height: 100%;
+  /* or height in PX */
+}
+
+#pincel {
+  margin-right: 10px;
+  color: black;
+}
+
+#excluir {
+  color: red;
+}
+
+#todas_notas {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#primeira_coluna{
+  width: 270px;
+  float: left;
+}
+
+#segunda_coluna{
+  width: 270px;
+  float: left;
+}
+
+#terceira_coluna{
+  width: 270px;
+  float: left;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .rectangle2 {
+    margin: 2em;
+  }
+  .Envie-um-elogio {
+    width: 100%;
+    margin: 1em;
+  }
+   .Deixe-um-recado {
+    width: 100%;
+    margin: 1em;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1 {
+    font-size: 3em;
+  }
+  .rectangle2 {
+    margin: 3em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 4em;
+  }
+  .rectangle2 {
+    margin: 4em;
+  }
+  .Envie-um-elogio {
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  h1 {
+    font-size: 5em;
+  }
+  .rectangle2 {
+    margin: 4em;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 6em;
+  }
+}

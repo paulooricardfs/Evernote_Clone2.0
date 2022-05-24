@@ -1,0 +1,100 @@
+
+	<div>
+		<h1 class="text-center display-3 fw-normal">Criar Nota</h1>
+	</div>
+
+	<div>
+		<form action="/notes" method="POST">
+			
+			{{>notas/_form}}
+			
+			<div>
+				<!-- PRIMEIRA COLUNA -->
+				<!--
+				<div id="primeira_coluna">
+					<div>
+						<input type="checkbox" id="angular" name="tags[]" value="angular">
+						<label for="angular">Angular</label>
+					</div>
+					<div>
+						<input type="checkbox" id="java" name="tags[]" value="java">
+						<label for="java">Java</label>
+					</div>
+					<div>
+						<input type="checkbox" id="nodejs" name="tags[]" value="nodejs">
+						<label for="nodejs">Nodejs</label>
+					</div>
+					<div>
+						<input type="checkbox" id="python" name="tags[]" value="python">
+						<label for="python">Python</label>
+					</div>
+					<div>
+						<input type="checkbox" id="sqlite" name="tags[]" value="sqlite">
+						<label for="sqlite">Sqlite</label>
+					</div>
+				</div>
+				-->
+				
+
+				<!-- SEGUNDA COLUNA -->
+				<!-- 
+				<div id="segunda_coluna">
+					<div>
+					<input type="checkbox" id="c" name="tags[]" value="c">
+					<label for="c">C</label>
+					</div>
+					<div>
+						<input type="checkbox" id="javascript" name="tags[]" value="javascript">
+						<label for="javascript">JavaScript</label>
+					</div>
+					<div>
+						<input type="checkbox" id="npm" name="tags[]" value="npm">
+						<label for="npm">Npm</label>
+					</div>
+					<div>
+						<input type="checkbox" id="reactjs" name="tags[]" value="reactjs">
+						<label for="reactjs">Reactjs</label>
+					</div>
+					<div>
+						<input type="checkbox" id="sqlite3" name="tags[]" value="sqlite3">
+						<label for="sqlite3">Sqlite3</label>
+					</div>
+				</div>
+				-->
+
+				<!-- TERCEIRA COLUNA -->
+				<!--
+				<div id="terceira_coluna">
+					<div>
+					<input type="checkbox" id="c++" name="tags[]" value="c++">
+					<label for="c++">C++</label>
+					</div>
+					<div>
+						<input type="checkbox" id="mysql" value="mysql" name="tags[]">
+						<label for="mysql">mySQL</label>
+					</div>
+					<div>
+						<input type="checkbox" id="postgresql" value="postgresql" name="tags[]">
+						<label for="postgresql">Postgresql</label>
+					</div>
+					<div>
+						<input type="checkbox" id="ruby" value="ruby" name="tags[]">
+						<label for="ruby">Ruby</label>
+					</div>
+					<div>
+						<input type="checkbox" id="vuejs" value="vuejs" name="tags[]">
+						<label for="vuejs">Vuejs</label>
+					</div>
+				</div>
+				-->
+
+			</div>
+			
+			<div style="clear: both;">
+				<div class="col-lg-12" style="text-align: center;">
+					<button class="btn btn-primary" type="submit">Salvar</button>
+				</div>	
+			</div>
+			
+		</form>
+	</div>

@@ -1,0 +1,12 @@
+<div>
+	<h1 class="text-center display-3 fw-normal">Etiquetas Index</h1>
+</div>
+<div>
+	<ul>
+		{{#each tags}}
+		<li>
+			<a href="/etiquetas/{{this.id}}">{{this.id}} - {{this.name}} ({{this.notes.length}})</a>
+		</li>
+		{{/each}}
+	</ul>
+</div>

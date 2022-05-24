@@ -1,0 +1,13 @@
+<div>
+	<h1 class="text-center display-3 fw-normal">Categorias Index</h1>
+</div>
+
+<div>
+	<ul>
+		{{#each categories}}
+		<li>
+			<a href="/categorias/{{this.id}}">{{this.id}} - {{this.name}} ({{this.notes.length}})</a>
+		</li>
+		{{/each}}
+	</ul>
+</div>

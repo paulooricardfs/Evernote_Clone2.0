@@ -1,0 +1,70 @@
+<div class="form-group">
+	<label for="titulo">
+		<b>
+			Título
+		</b>
+	</label>
+	<input class="form-control" type="text" name="title" placeholder="Título" value="{{note.title}}" required>
+</div>
+
+<!-- select -->
+<div class="form-group">
+	<label for="categoria">
+		<b>
+			Categoria
+		</b>
+	</label>
+	<select class="form-control" name="categoria_id">
+		{{#each categories}}
+		<option 
+			value="{{this.id}}"
+			{{#if (compare this.id "==" ../note.category_id) }}
+			selected
+			{{/if}}
+			>
+			{{this.name}}
+		</option>
+		{{/each}}
+		<!--
+		<option value="to do">to do</option>
+		<option value="doing">doing</option>
+		<option value="done">done</option>
+		-->
+	</select>
+</div>
+
+<div class="form-group">
+	<label for="corpo">
+		<b>
+			Corpo
+		</b>
+	</label>
+	<textarea class="form-control" name="body" rows="4" placeholder="Corpo" required>{{note.body}}</textarea>
+</div>
+
+<!-- ETIQUETAS -->
+<label for="etiquetas">
+	<b>
+		Etiquetas
+	</b>
+</label>
+
+<div class="row">
+	{{#each tags}}
+	<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+		<div>
+			<input 
+				type="checkbox"
+				name="tags[]"
+				value="{{this.id}}"
+				{{#if (ifIn this.id ../note.tags) }}
+				checked
+				{{/if}}
+				>
+			<label>
+				{{this.name}}
+			</label>
+		</div>
+	</div>
+	{{/each}}
+</div>
