@@ -1,7 +1,11 @@
 <div>
-	<h1 class="text-center display-3 fw-normal">Notas</h1>
+	<h1 class="text-center display-3 fw-normal">Nota {{note.dataValues.id}}</h1>
 </div>
 
 <div>
-	{{> notas/_card note=note simple=false }}
+	<ul>
+		<li>
+			{{> notas/_card note=note simple=false }}
+		</li>
+	</ul>
 </div>

@@ -1,10 +1,10 @@
 <div>
-	<h1 class="text-center display-3 fw-normal">Categoria: {{category.name}}</h1>
+	<h1 class="text-center display-3 fw-normal">Categoria: {{category.dataValues.name}}</h1>
 </div>
 <div>
 
 <ul>	
-	{{#each category.notes}}
+	{{#each category.dataValues.notes}}
 	<li>
 		{{> notas/_card note=this simple=true}}
 	</li>

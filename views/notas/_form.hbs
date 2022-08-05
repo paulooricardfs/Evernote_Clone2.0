@@ -4,7 +4,7 @@
 			Título
 		</b>
 	</label>
-	<input class="form-control" type="text" name="title" placeholder="Título" value="{{note.title}}" required>
+	<input class="form-control" type="text" name="title" placeholder="Título" value="{{note.dataValues.title}}" required>
 </div>
 
 <!-- select -->
@@ -22,7 +22,7 @@
 			selected
 			{{/if}}
 			>
-			{{this.name}}
+			{{this.dataValues.name}}
 		</option>
 		{{/each}}
 		<!--
@@ -39,7 +39,7 @@
 			Corpo
 		</b>
 	</label>
-	<textarea class="form-control" name="body" rows="4" placeholder="Corpo" required>{{note.body}}</textarea>
+	<textarea class="form-control" name="body" rows="4" placeholder="Corpo" required>{{note.dataValues.body}}</textarea>
 </div>
 
 <!-- ETIQUETAS -->
@@ -62,7 +62,7 @@
 				{{/if}}
 				>
 			<label>
-				{{this.name}}
+				{{this.dataValues.name}}
 			</label>
 		</div>
 	</div>

@@ -1,21 +1,55 @@
 <div>
-	<h4>{{note.title}} - Card</h4>
+	<h4>{{note.dataValues.title}}</h4>
 	<p>
-	{{note.body}}
+	{{note.dataValues.body}}
 	<hr />
 	
-	<b>Categoria:</b> {{ note.category.name }}  <br>
+	<b>Categoria:</b> {{ note.category.dataValues.name }}  <br>
 
-	<b>Criado em:</b> {{fromIsoToPtBr note.created_at}}<br>
-	<b>Atualizado em:</b> {{fromIsoToPtBr note.updated_at}}<br>
+	<b>Criado em:</b> {{ dateFormat note.dataValues.createdAt "DD/MM/YYYY HH:mm:ss" }}<br>
+	<b>Atualizado em:</b> {{ dateFormat note.dataValues.updatedAt "DD/MM/YYYY HH:mm:ss"}}<br>
 	<b>Etiquetas: </b> 
-	{{#each note.tagsList ~}}
+	{{#each note.tags ~}}
 	{{#compare @index '!==' 0}},&nbsp;{{/compare ~}}
-	{{ this.name ~}}
+	{{ this.dataValues.name ~}}
 	{{/each ~}}
 	<br />
-	{{#if simple}}
-	<a href="/{{note.id}}" >Ver mais</a>
-	{{/if}}
 	</p>
 </div>
+{{#if simple}}
+<a href="/{{note.dataValues.id}}" class="btn btn-success">Ver mais</a>
+{{else}}
+<a
+	href="/{{note.dataValues.id}}/"
+	class="btn btn-danger"
+	onclick="return deleteNote()"
+>
+	Delete
+</a>
+{{/if}}
+<a href="/{{note.dataValues.id}}/edit" class="btn btn-warning">Editar</a>
+<form method="post" action="/{{note.id}}/delete" id="form-delete" class="d-none">
+	<input type="hidden" name="action" value="delete" />
+</form>
+
+<script>
+const deleteNote = () => {
+	if (event) {
+
+
+		event.preventDefault();
+	}
+
+	const noteJs = {
+		title: "{{note.title}}",
+		id: "{{note.id}}",
+	};
+
+	if (confirm(`Deseja deletar a nota ${noteJs.title}?`)) {
+		document.querySelector('#form-delete').submit();
+	} else {
+		return false;
+	}
+};
+</script>
+

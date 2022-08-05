@@ -3,11 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var moment = require('moment');
 
 const hbs = require('express-handlebars');
 const hbshelpers = require('handlebars-helpers');
 const multihelpers = hbshelpers();
 const hbsCustomFunctions = require('./config/hbs-custom-functions');
+
+// hbs2.registerHelper('dateFormat', require('handlebars-dateformat'));
+
 
 var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
@@ -22,10 +26,12 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+/*
 const Nota = require('./models/Nota')
 const Categoria = require('./models/Categoria')
 const Tag = require('./models/Tag')
 const Note_tag = require('./models/Note_tag')
+*/
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -47,6 +53,7 @@ app.engine(
     helpers: hbsCustomFunctions
   })
 );
+
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));

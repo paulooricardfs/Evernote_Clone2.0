@@ -6,7 +6,7 @@
 	<ul>
 		{{#each categories}}
 		<li>
-			<a href="/categorias/{{this.id}}">{{this.id}} - {{this.name}} ({{this.notes.length}})</a>
+			<a href="/categorias/{{this.dataValues.id}}">{{this.dataValues.id}} - {{this.dataValues.name}} ({{this.dataValues.notes.length}})</a>
 		</li>
 		{{/each}}
 	</ul>

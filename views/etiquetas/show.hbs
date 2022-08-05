@@ -1,14 +1,13 @@
 <div>
-	<h1 class="text-center display-3 fw-normal">Etiquetas {{tag.name}}</h1>
+	<h1 class="text-center display-3 fw-normal">Etiquetas {{tag.dataValues.name}}</h1>
 </div>
 <div>
 	<ul>	
-		{{#each tag.notes}}
+		{{#each tag.dataValues.notes}}
 		<br>
 		<li>
 			{{> notas/_card note=this simple=true}}
 		</li>
 		{{/each}}
 	</ul>
-
 </div>

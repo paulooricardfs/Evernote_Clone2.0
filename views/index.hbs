@@ -5,6 +5,19 @@
 </div>
 
 <div>
+	Contagem: {{ notes.length }} <br />
+	<ul>
+		{{#each notes}}
+		<br>
+		<li>
+			{{> notas/_card note=this simple=true}}
+		</li>
+		{{/each}}
+	</ul>
+</div>
+
+<!--
+<div>
 	<ul>
 		{{#each notes}}
 		<br>
@@ -14,10 +27,12 @@
 			{{this.category_id}}<br>
 			{{this.created_at}}<br>
 			{{this.updated_at}}<br>
-			{{this.tags}}
+			{{this.tags}}<br>
+			<a href="/notas/{{this.id}}"><button type="button" class="btn btn-success"> Ver mais </button></a>
+			<a href="/notas/edit"><button type="button" class="btn btn-success"> Editar </button></a>
 		</li>
 		{{/each}}
 	</ul>
 </div>
-
+-->
 <hr>
